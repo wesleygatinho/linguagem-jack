@@ -1,0 +1,61 @@
+function Box.new 0
+push constant 2
+call Memory.alloc 1
+pop pointer 0
+push argument 0
+pop this 0
+push argument 1
+pop this 1
+push pointer 0
+return
+function Box.getP1 0
+push argument 0
+pop pointer 0
+push this 0
+return
+function Box.getP2 0
+push argument 0
+pop pointer 0
+push this 1
+return
+function Box.setP1 0
+push argument 0
+pop pointer 0
+push argument 1
+pop this 0
+push constant 0
+return
+function Box.setP2 0
+push argument 0
+pop pointer 0
+push argument 1
+pop this 1
+push constant 0
+return
+function Box.getWidth 0
+push argument 0
+pop pointer 0
+push this 1
+call Point.getX 1
+push this 0
+call Point.getX 1
+sub
+return
+function Box.getHeight 0
+push argument 0
+pop pointer 0
+push this 1
+call Point.getY 1
+push this 0
+call Point.getY 1
+sub
+return
+function Box.getArea 0
+push argument 0
+pop pointer 0
+push pointer 0
+call Box.getWidth 1
+push pointer 0
+call Box.getHeight 1
+call Math.multiply 2
+return

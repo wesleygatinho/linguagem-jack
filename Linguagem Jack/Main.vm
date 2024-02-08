@@ -1,0 +1,23 @@
+function Main.main 1
+push constant 0
+push constant 0
+call Point.new 2
+push constant 10
+push constant 6
+call Point.new 2
+call Box.new 2
+pop local 0
+push local 0
+call Box.getWidth 1
+call Out.println 1
+pop temp 0
+push local 0
+call Box.getHeight 1
+call Out.println 1
+pop temp 0
+push local 0
+call Box.getArea 1
+call Out.println 1
+pop temp 0
+push constant 0
+return

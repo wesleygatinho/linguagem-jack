@@ -1,0 +1,45 @@
+class Box {
+
+  field Point _p1;
+  field Point _p2;
+
+
+  constructor Box new(Point p1, Point p2) {
+    let _p1 = p1;
+    let _p2 = p2;
+    return this;
+  }
+
+
+  method Point getP1() {
+    return _p1;
+  }
+
+  method Point getP2() {
+    return _p2;
+  }
+
+  method void setP1(Point p1) {
+    let _p1 = p1;
+    return;
+  }
+
+  method void setP2(Point p2) {
+    let _p2 = p2;
+    return;
+  }
+
+  method int getWidth () {
+    return _p2.getX() - _p1.getX();
+  }
+
+  method int getHeight() {
+      return _p2.getY() - _p1.getY();
+  }
+
+  method double getArea() 
+  {
+         return (getWidth() * getHeight());
+  }
+
+}

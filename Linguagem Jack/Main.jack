@@ -1,0 +1,15 @@
+class Main  {
+  function void main() {
+    var Box box;
+    let box = Box.new (Point.new(0, 0), Point.new (10, 6));
+    do Out.println (box.getWidth());  
+    do Out.println (box.getHeight());
+    do Out.println (box.getArea());
+    return;
+ 
+
+    //System.out.println (56.9);
+    
+    
+  }
+}
